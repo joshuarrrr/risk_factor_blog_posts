@@ -1,7 +1,5 @@
 import scraperwiki
-import sys, requests
-
-import BeautifulSoup as bs
+import sys, requests, bs4
 
 # import os, errno, optparse
 
@@ -18,7 +16,7 @@ def parseSitemap():
     res = requests.get(sitemap)
     res.raise_for_status()
 
-    soup = bs.BeautifulSoup(res.text)
+    soup = bs4.BeautifulSoup(res.text)
     potentialLinks = soup.select('loc')
 
     for link in potentialLinks:
