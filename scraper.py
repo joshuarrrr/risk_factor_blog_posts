@@ -1,5 +1,5 @@
 import scraperwiki
-import sys, requests, 
+import sys, requests
 
 import BeautifulSoup as bs
 
